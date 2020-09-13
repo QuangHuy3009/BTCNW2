@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+    <title>
+        form44
+    </title>
+    <script>
+        function sukien() {
+            var a = chiso.value;
+            document.getElementById("mucluc").selectedIndex = a;
+        }
+    </script>
+</head>
+
+<body>
+    <select id="mucluc">
+        <option value="0">Index 0</option>
+        <option value="1">Index 1</option>
+        <option value="2">Index 2</option>
+        <option value="3">Index 3</option>
+    </select>
+    <input type="text" id="chiso">
+    <input type="button" id="submit" onclick="sukien()" value="Click here">
+</body>

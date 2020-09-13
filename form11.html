@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Form 11</title>
+    <link rel="stylesheet" type="text/css" href="form1.css">
+    <script>
+        function dangnhap() {
+            if (user.value == "") {
+                alert("chưa nhập tên đăng nhập");
+            } else if (pass.value == "") {
+                alert("chưa nhập pass");
+            } else {
+                alert("OK");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <style>
+        .hehe {
+            transform: translateY(50%);
+            margin: auto;
+            height: 370px;
+            width: 350px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 14px 0px grey;
+            background-color: rgba(166, 228, 225, 0.986);
+        }
+        
+        input[type="text"] {
+            margin-left: 30px;
+            padding: 5px;
+            width: 270px;
+            height: 20px;
+        }
+        
+        input[type="password"] {
+            margin-left: 30px;
+            padding: 5px;
+            width: 270px;
+            height: 20px;
+        }
+        
+        input[type="button"] {
+            height: 40px;
+            width: 100px;
+        }
+    </style>
+    <form class="hehe">
+        <div style="text-align: center; padding-top:10px ">
+            <h2>Login</h2>
+        </div>
+        <div style="margin: 10px;">
+            <h3>User</h3>
+        </div>
+        <input type="text" id="user">
+        <div style="margin: 10px;">
+            <h3>Pass</h3>
+        </div>
+        <input type="password" id="pass">
+        <div style="margin-left: 20px; margin-top:40px">
+            <input type="button" value="OK" onclick="dangnhap()">
+            <input type="button" value="Reset">
+            <input type="button" value="Cancel">
+        </div>
+    </form>
+</body>

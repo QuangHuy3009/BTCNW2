@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Form33</title>
+    <script>
+        function hoathuong() {
+            var text = document.getElementById("thuong");
+            var texthoa = document.getElementById("hoa");
+            for (var i=0;i<text.value.length;i++) {
+            var n = text.value.charCodeAt(i);
+            if(n>96){
+                var textResult =text.value.charCodeAt(i) - 32;
+            }
+            else {
+                var textResult =text.value.charCodeAt(i) + 32;
+            }                        
+            texthoa.value+= String.fromCharCode(textResult);
+            console.log(n)
+            }        
+          
+        }
+
+        function reseet() {
+            var text = document.getElementById("thuong");
+            var texthoa = document.getElementById("hoa");
+            texthoa.value = "";
+            text.value = "";
+        }
+
+        function load() {
+            thuong.focus();
+        }
+    </script>
+</head>
+
+<body onload="load()">
+    <input type="text" placeholder="Nhap vao day" id="thuong" onblur="hoathuong()">
+    <input type="text" id="hoa">
+    <input type="reset" onclick="reseet()">
+
+</body>
